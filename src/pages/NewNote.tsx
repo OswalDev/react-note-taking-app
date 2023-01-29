@@ -1,5 +1,5 @@
 import { NoteData, Tag } from "../App"
-import { NoteForm } from "./NoteForm"
+import { NoteForm } from "../layout/NoteForm"
 
 type NewNoteProps = {
   onSubmit: (data: NoteData) => void

@@ -5,10 +5,10 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { NewNote } from "./pages/NewNote"
 import { useLocalStorage } from "./useLocalStorage"
 import { v4 as uuidV4 } from "uuid"
-import { NoteList } from "./pages/NoteList"
-import { NoteLayout } from "./pages/NoteLayout"
-// import { Note } from "./pages/Note"
-// import { EditNote } from "./pages/EditNote"
+import { NoteList } from "./layout/NoteList"
+import { NoteLayout } from "./layout/NoteLayout"
+import { Note } from "./layout/Note"
+import { EditNote } from "./layout/EditNote"
 
 export type Note = {
   id: string
@@ -118,7 +118,7 @@ function App() {
             />
           }
         />
-        {/* <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
+        <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
           <Route index element={<Note onDelete={onDeleteNote} />} />
           <Route
             path="edit"
@@ -130,10 +130,11 @@ function App() {
               />
             }
           />
-        </Route> */}
+        </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Container>
   )
 }
+
 export default App
