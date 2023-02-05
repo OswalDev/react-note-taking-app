@@ -8,7 +8,7 @@ import { v4 as uuidV4 } from "uuid"
 import { NoteList } from "./layout/NoteList"
 import { NoteLayout } from "./layout/NoteLayout"
 import { Note } from "./layout/Note"
-import { EditNote } from "./layout/EditNote"
+import { EditNote } from "./pages/EditNote"
 
 export type Note = {
   id: string
